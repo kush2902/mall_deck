@@ -3,6 +3,7 @@ import Why from "../sections/Why";
 import Retail from "../sections/Retail";
 import Entertainment from "../sections/Entertainment";
 import CTA from "../sections/CTA";
+import Events from "../sections/Events";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Why />
       <Retail />
       <Entertainment />
+      <Events />
       <CTA />
     </main>
   );
