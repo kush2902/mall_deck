@@ -20,3 +20,7 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+section {
+  will-change: transform, opacity;
+}
