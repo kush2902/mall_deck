@@ -1,6 +1,6 @@
 "use client";
 
-import SectionWrapper from "@/components/SectionWrapper";
+import SectionWrapper from "../components/SectionWrapper";
 
 export default function Retail() {
   return (
