@@ -1,28 +1,65 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import SectionWrapper from "../components/SectionWrapper";
 
-export default function Why() {
-  const stats = [
-    { value: "100M+", label: "Annual Visitors" },
-    { value: "1200+", label: "Retail Stores" },
-    { value: "5.9M sq ft", label: "Retail Space" },
-    { value: "200+", label: "Dining Options" },
-  ];
+function Counter({ target }: { target: number }) {
+  const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    let start = 0;
+    const duration = 1500;
+    const increment = target / (duration / 16);
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(timer);
+  }, [target]);
+
+  return <span>{count}</span>;
+}
+
+export default function Why() {
   return (
     <SectionWrapper>
       <h2 className="text-5xl mb-12">Why Dubai Mall</h2>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-        {stats.map((s, i) => (
-          <div key={i} className="group">
-            <h3 className="text-5xl font-bold group-hover:scale-110 transition">
-              {s.value}
-            </h3>
-            <p className="text-gray-400 mt-2">{s.label}</p>
-          </div>
-        ))}
+        <div>
+          <h3 className="text-5xl font-bold">
+            <Counter target={100} />M+
+          </h3>
+          <p className="text-gray-400">Visitors</p>
+        </div>
+
+        <div>
+          <h3 className="text-5xl font-bold">
+            <Counter target={1200} />+
+          </h3>
+          <p className="text-gray-400">Stores</p>
+        </div>
+
+        <div>
+          <h3 className="text-5xl font-bold">
+            <Counter target={59} />L+
+          </h3>
+          <p className="text-gray-400">Sq Ft</p>
+        </div>
+
+        <div>
+          <h3 className="text-5xl font-bold">
+            <Counter target={200} />+
+          </h3>
+          <p className="text-gray-400">Dining</p>
+        </div>
       </div>
     </SectionWrapper>
   );
