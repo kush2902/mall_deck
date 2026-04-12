@@ -1,24 +1,27 @@
 "use client";
 
 import SectionWrapper from "../components/SectionWrapper";
+import { motion } from "framer-motion";
 
 export default function Retail() {
+  const brands = ["Nike", "Apple", "Zara", "Gucci"];
+
   return (
     <SectionWrapper>
-      <h2 className="text-5xl mb-8">Retail Powerhouse</h2>
-
-      <p className="max-w-2xl text-gray-400 mb-10">
-        Home to global brands, flagship stores, and immersive retail experiences.
-      </p>
+      <h2 className="text-5xl mb-10">Retail Experience</h2>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {["Nike", "Zara", "Apple", "Gucci"].map((brand) => (
-          <div
+        {brands.map((brand) => (
+          <motion.div
             key={brand}
-            className="border border-gray-700 p-8 text-center hover:bg-white hover:text-black transition"
+            whileHover={{ scale: 1.1 }}
+            className="relative border border-gray-700 p-10 text-center cursor-pointer overflow-hidden"
           >
-            {brand}
-          </div>
+            {/* Hover Glow */}
+            <div className="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition" />
+
+            <h3 className="text-2xl font-semibold">{brand}</h3>
+          </motion.div>
         ))}
       </div>
     </SectionWrapper>
