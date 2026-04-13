@@ -62,5 +62,17 @@ export default function Why() {
         </div>
       </div>
     </SectionWrapper>
+
+ <section className="relative">
+  {/* 🖼 Background */}
+  <img
+    src="/images/mall.jpg"
+    className="absolute inset-0 w-full h-full object-cover opacity-20"
+  />
+
+  <div className="relative z-10">
+    {/* your existing content */}
+  </div>
+</section>
   );
 }
