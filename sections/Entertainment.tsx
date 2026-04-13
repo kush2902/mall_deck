@@ -32,5 +32,27 @@ export default function Entertainment() {
         ))}
       </div>
     </SectionWrapper>
+
+
+
+<section className="relative h-screen">
+  {/* 🎥 Background Video */}
+  <video
+    autoPlay
+    muted
+    loop
+    className="absolute w-full h-full object-cover"
+  >
+    <source src="/videos/entertainment.mp4" />
+  </video>
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60" />
+
+  {/* Content */}
+  <div className="relative z-10 flex items-center justify-center h-full">
+    <h2 className="text-5xl">Entertainment Like Never Before</h2>
+  </div>
+</section>   
   );
 }
