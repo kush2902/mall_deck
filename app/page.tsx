@@ -1,22 +1,30 @@
 "use client";
 
 import { useState } from "react";
-import Loader from "../components/Loader";
 
+// 🎬 Components
+import Loader from "../components/Loader";
+import Cursor from "../components/Cursor";
+
+// 🎥 Sections
 import Hero from "../sections/Hero";
 import Why from "../sections/Why";
 import Retail from "../sections/Retail";
 import Entertainment from "../sections/Entertainment";
 import Events from "../sections/Events";
-import Cursor from "../components/Cursor";
 
 export default function Page() {
   const [loaded, setLoaded] = useState(false);
 
   return (
     <>
+      {/* 🧠 Custom Cursor */}
+      <Cursor />
+
+      {/* 🎬 Loader */}
       {!loaded && <Loader onFinish={() => setLoaded(true)} />}
 
+      {/* 🎥 Main Content */}
       {loaded && (
         <>
           <Hero />
@@ -26,21 +34,6 @@ export default function Page() {
           <Events />
         </>
       )}
-  <>
-
-  <>
-  <Cursor />
-  {!loaded && <Loader onFinish={() => setLoaded(true)} />}
-
-  {loaded && (
-    <>
-      <Hero />
-      <Why />
-      <Retail />
-      <Entertainment />
-      <Events />
     </>
-  )}
-  </>
   );
 }
