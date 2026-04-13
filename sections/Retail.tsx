@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 export default function Retail() {
   const brands = [
-  { name: "Nike", img: "/images/nike.jpg" },
-  { name: "Apple", img: "/images/apple.jpg" },
-  { name: "Zara", img: "/images/zara.jpg" },
-  { name: "Gucci", img: "/images/gucci.jpg" },
-];
+    { name: "Nike", img: "/images/nike.jpg" },
+    { name: "Apple", img: "/images/apple.jpg" },
+    { name: "Zara", img: "/images/zara.jpg" },
+    { name: "Gucci", img: "/images/gucci.jpg" },
+  ];
 
   return (
     <SectionWrapper>
@@ -18,14 +18,20 @@ export default function Retail() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {brands.map((brand) => (
           <motion.div
-            key={brand}
-            whileHover={{ scale: 1.1 }}
-            className="relative border border-gray-700 p-10 text-center cursor-pointer overflow-hidden"
+            key={brand.name}
+            whileHover={{ scale: 1.05 }}
+            className="relative h-64 overflow-hidden rounded-xl"
           >
-            {/* Hover Glow */}
-            <div className="absolute inset-0 bg-white opacity-0 hover:opacity-10 transition" />
+            {/* 🖼 Image */}
+            <img
+              src={brand.img}
+              className="absolute w-full h-full object-cover"
+            />
 
-            <h3 className="text-2xl font-semibold">{brand}</h3>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+              <h3 className="text-2xl font-semibold">{brand.name}</h3>
+            </div>
           </motion.div>
         ))}
       </div>
