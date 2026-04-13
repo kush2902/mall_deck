@@ -4,7 +4,12 @@ import SectionWrapper from "../components/SectionWrapper";
 import { motion } from "framer-motion";
 
 export default function Retail() {
-  const brands = ["Nike", "Apple", "Zara", "Gucci"];
+  const brands = [
+  { name: "Nike", img: "/images/nike.jpg" },
+  { name: "Apple", img: "/images/apple.jpg" },
+  { name: "Zara", img: "/images/zara.jpg" },
+  { name: "Gucci", img: "/images/gucci.jpg" },
+];
 
   return (
     <SectionWrapper>
