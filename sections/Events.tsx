@@ -7,15 +7,15 @@ export default function Events() {
   const events = [
     {
       title: "Dubai Shopping Festival",
-      desc: "World-class retail celebration with offers & shows",
+      img: "/images/event1.jpg",
     },
     {
       title: "Fashion Week",
-      desc: "Global brands showcase latest trends",
+      img: "/images/event2.jpg",
     },
     {
       title: "Live Concerts",
-      desc: "Entertainment from international artists",
+      img: "/images/event3.jpg",
     },
   ];
 
@@ -27,11 +27,19 @@ export default function Events() {
         {events.map((event) => (
           <motion.div
             key={event.title}
-            whileHover={{ y: -10 }}
-            className="border border-gray-700 p-8"
+            whileHover={{ scale: 1.05 }}
+            className="relative h-80 overflow-hidden rounded-xl"
           >
-            <h3 className="text-2xl mb-4">{event.title}</h3>
-            <p className="text-gray-400">{event.desc}</p>
+            {/* 🖼 Image */}
+            <img
+              src={event.img}
+              className="absolute w-full h-full object-cover"
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/50 flex items-end p-6">
+              <h3 className="text-2xl font-semibold">{event.title}</h3>
+            </div>
           </motion.div>
         ))}
       </div>
