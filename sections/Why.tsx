@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import SectionWrapper from "../components/SectionWrapper";
+import { useEffect, useState } from "react";
 
 function Counter({ target }: { target: number }) {
   const [count, setCount] = useState(0);
@@ -29,50 +29,47 @@ function Counter({ target }: { target: number }) {
 
 export default function Why() {
   return (
-    <SectionWrapper>
-      <h2 className="text-5xl mb-12">Why Dubai Mall</h2>
+    <section className="relative min-h-screen flex items-center">
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-        <div>
-          <h3 className="text-5xl font-bold">
-            <Counter target={100} />M+
-          </h3>
-          <p className="text-gray-400">Visitors</p>
-        </div>
+      {/* 🖼 Background Image */}
+      <img
+        src="/images/mall.jpg"
+        className="absolute inset-0 w-full h-full object-cover opacity-20"
+      />
 
-        <div>
-          <h3 className="text-5xl font-bold">
-            <Counter target={1200} />+
-          </h3>
-          <p className="text-gray-400">Stores</p>
-        </div>
+      <div className="relative z-10 w-full px-10 md:px-20">
+        <h2 className="text-5xl mb-12">Why Dubai Mall</h2>
 
-        <div>
-          <h3 className="text-5xl font-bold">
-            <Counter target={59} />L+
-          </h3>
-          <p className="text-gray-400">Sq Ft</p>
-        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+          <div>
+            <h3 className="text-5xl font-bold">
+              <Counter target={100} />M+
+            </h3>
+            <p className="text-gray-400">Visitors</p>
+          </div>
 
-        <div>
-          <h3 className="text-5xl font-bold">
-            <Counter target={200} />+
-          </h3>
-          <p className="text-gray-400">Dining</p>
+          <div>
+            <h3 className="text-5xl font-bold">
+              <Counter target={1200} />+
+            </h3>
+            <p className="text-gray-400">Stores</p>
+          </div>
+
+          <div>
+            <h3 className="text-5xl font-bold">
+              <Counter target={59} />L+
+            </h3>
+            <p className="text-gray-400">Sq Ft</p>
+          </div>
+
+          <div>
+            <h3 className="text-5xl font-bold">
+              <Counter target={200} />+
+            </h3>
+            <p className="text-gray-400">Dining</p>
+          </div>
         </div>
       </div>
-    </SectionWrapper>
-
- <section className="relative">
-  {/* 🖼 Background */}
-  <img
-    src="/images/mall.jpg"
-    className="absolute inset-0 w-full h-full object-cover opacity-20"
-  />
-
-  <div className="relative z-10">
-    {/* your existing content */}
-  </div>
-</section>
+    </section>
   );
 }
