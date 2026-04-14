@@ -15,11 +15,11 @@ export default function Events() {
 
       <div className="grid md:grid-cols-3 gap-8">
         {events.map((event) => (
-          <motion.div
-            key={event.title}
-            whileHover={{ scale: 1.05 }}
-            className="relative h-80 overflow-hidden rounded-xl"
-          >
+         <motion.div
+          key={event.title}
+          whileHover={{ scale: 1.05 }}
+          className="relative h-80 overflow-hidden rounded-xl hover-zoom hover-lift"
+        >
             <img
               src={event.img}
               className="absolute w-full h-full object-cover"
