@@ -28,12 +28,20 @@ export default function Header() {
         </h1>
 
         {/* Nav */}
-        <nav className="hidden md:flex gap-10 text-sm">
-          <a href="#why" className="hover:text-gray-300 transition">Why</a>
-          <a href="#retail" className="hover:text-gray-300 transition">Retail</a>
-          <a href="#entertainment" className="hover:text-gray-300 transition">Entertainment</a>
-          <a href="#events" className="hover:text-gray-300 transition">Events</a>
-        </nav>
+        <<nav className="hidden md:flex gap-10 text-sm">
+  <a href="#why" className="nav-link hover:text-gray-300">
+    Why
+  </a>
+  <a href="#retail" className="nav-link hover:text-gray-300">
+    Retail
+  </a>
+  <a href="#entertainment" className="nav-link hover:text-gray-300">
+    Entertainment
+  </a>
+  <a href="#events" className="nav-link hover:text-gray-300">
+    Events
+  </a>
+</nav>
 
       </div>
     </header>
