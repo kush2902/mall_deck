@@ -30,6 +30,7 @@ export default function Why() {
   return (
     <section id="why" className="relative min-h-screen flex items-center">
 
+      {/* Background */}
       <img
         src="/images/mall.jpg"
         className="absolute inset-0 w-full h-full object-cover opacity-20"
@@ -39,33 +40,36 @@ export default function Why() {
         <h2 className="text-5xl mb-12">Why Dubai Mall</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-          <div>
+
+          {/* Stat Card */}
+          <div className="hover-lift hover-glow p-4 rounded-lg">
             <h3 className="text-5xl font-bold">
               <Counter target={100} />M+
             </h3>
             <p className="text-gray-400">Visitors</p>
           </div>
 
-          <div>
+          <div className="hover-lift hover-glow p-4 rounded-lg">
             <h3 className="text-5xl font-bold">
               <Counter target={1200} />+
             </h3>
             <p className="text-gray-400">Stores</p>
           </div>
 
-          <div>
+          <div className="hover-lift hover-glow p-4 rounded-lg">
             <h3 className="text-5xl font-bold">
               <Counter target={59} />L+
             </h3>
             <p className="text-gray-400">Sq Ft</p>
           </div>
 
-          <div>
+          <div className="hover-lift hover-glow p-4 rounded-lg">
             <h3 className="text-5xl font-bold">
               <Counter target={200} />+
             </h3>
             <p className="text-gray-400">Dining</p>
           </div>
+
         </div>
       </div>
     </section>
