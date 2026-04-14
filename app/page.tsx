@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 import Loader from "../components/Loader";
-import Cursor from "../components/Cursor";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -18,7 +17,6 @@ export default function Page() {
 
   return (
     <>
-      <Cursor />
       <Header />
 
       {!loaded && <Loader onFinish={() => setLoaded(true)} />}
