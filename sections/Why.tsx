@@ -1,6 +1,5 @@
 "use client";
 
-import SectionWrapper from "../components/SectionWrapper";
 import { useEffect, useState } from "react";
 
 function Counter({ target }: { target: number }) {
@@ -29,9 +28,8 @@ function Counter({ target }: { target: number }) {
 
 export default function Why() {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section id="why" className="relative min-h-screen flex items-center">
 
-      {/* 🖼 Background Image */}
       <img
         src="/images/mall.jpg"
         className="absolute inset-0 w-full h-full object-cover opacity-20"
