@@ -18,10 +18,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white mb-4">Explore</h3>
           <ul className="space-y-2 text-sm">
-            <li>Retail</li>
-            <li>Dining</li>
-            <li>Entertainment</li>
-            <li>Events</li>
+            <li className="hover:text-white cursor-pointer transition">Retail</li>
+            <li className="hover:text-white cursor-pointer transition">Dining</li>
+            <li className="hover:text-white cursor-pointer transition">Entertainment</li>
+            <li className="hover:text-white cursor-pointer transition">Events</li>
           </ul>
         </div>
 
