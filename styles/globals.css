@@ -30,3 +30,52 @@ section {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+/* 🔥 Smooth transitions everywhere */
+* {
+  transition: all 0.3s ease;
+}
+
+/* ✨ Image hover zoom */
+.hover-zoom img {
+  transition: transform 0.6s ease;
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* 💎 Card lift */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* 🌟 Glow effect */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* 🎯 Text underline animation */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
