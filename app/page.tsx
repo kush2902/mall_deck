@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 
-// 🎬 Components
 import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-// 🎥 Sections
 import Hero from "../sections/Hero";
 import Why from "../sections/Why";
 import Retail from "../sections/Retail";
@@ -18,13 +18,11 @@ export default function Page() {
 
   return (
     <>
-      {/* 🧠 Custom Cursor */}
       <Cursor />
+      <Header />
 
-      {/* 🎬 Loader */}
       {!loaded && <Loader onFinish={() => setLoaded(true)} />}
 
-      {/* 🎥 Main Content */}
       {loaded && (
         <>
           <Hero />
@@ -32,6 +30,7 @@ export default function Page() {
           <Retail />
           <Entertainment />
           <Events />
+          <Footer />
         </>
       )}
     </>
