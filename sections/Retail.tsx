@@ -19,8 +19,8 @@ export default function Retail() {
           <motion.div
             key={brand.name}
             whileHover={{ scale: 1.05 }}
-            className="relative h-64 overflow-hidden rounded-xl"
-          >
+            className="relative h-64 overflow-hidden rounded-xl hover-zoom hover-lift"
+           >
             <img
               src={brand.img}
               className="absolute w-full h-full object-cover"
