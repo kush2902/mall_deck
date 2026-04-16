@@ -5,7 +5,7 @@ import { useState } from "react";
 import Loader from "../components/Loader";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
+import Opportunities from "../sections/Opportunities";
 import Hero from "../sections/Hero";
 import Why from "../sections/Why";
 import Retail from "../sections/Retail";
@@ -28,6 +28,7 @@ export default function Page() {
           <Retail />
           <Entertainment />
           <Events />
+          <Opportunities />
           <Footer />
         </>
       )}
