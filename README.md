@@ -110,7 +110,7 @@ Project structure:
 ### 1. Clone repo
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/kush2902/mall_deck/tree/main
 cd project
 ```
 
