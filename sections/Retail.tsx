@@ -1,6 +1,10 @@
 "use client";
 
+"use client";
+
 import SlideWrapper from "../components/SlideWrapper";
+import BackgroundMedia from "../components/BackgroundMedia";
+import { motion } from "framer-motion";
 
 export default function Retail() {
   return (
