@@ -8,7 +8,7 @@ type Props = {
   setActive: (key: string) => void;
 };
 
-export default function Entertainment() {
+export default function Entertainment({ setActive }: Props) {
   return (
     <SlideWrapper>
       <BackToHub setActive={setActive} />
