@@ -17,7 +17,7 @@ export default function Hero() {
         transition={{ duration: 6 }}
         className="absolute w-full h-full object-cover"
       >
-        <source src="YOUR_HERO_VIDEO_URL" />
+        <source src="https://res.cloudinary.com/dv8ywrti6/video/upload/v1776364998/Untitled_design-2_f6y0ig.mp4" />
       </motion.video>
 
       {/* DARK OVERLAY */}
