@@ -36,7 +36,4 @@ export default function Retail() {
       </div>
     </SlideWrapper>
   );
-}      </div>
-    </SlideWrapper>
-  );
 }
