@@ -11,7 +11,7 @@ export default function Brand() {
       <BackToHub />
 
       {/* BACKGROUND VIDEO */}
-      <BackgroundMedia video="/videos/brand.mp4" />
+      <BackgroundMedia video="/videos/store.mp4" />
 
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-0" />
