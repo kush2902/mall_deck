@@ -7,7 +7,7 @@ import BackToHub from "../components/BackToHub";
 export default function Retail() {
   return (
     <SlideWrapper>
-      <BackToHub />
+      <BackToHub setActive={setActive} />
       <BackgroundMedia video="/videos/retail.mp4" />
 
       <div className="relative z-10 h-full flex items-center px-20">
