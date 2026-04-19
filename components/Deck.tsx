@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import Hero from "../sections/Hero";
 import Why from "../sections/Why";
+import NavHub from "../sections/NavHub";
 import Dining from "../sections/Dining";
 import Retail from "../sections/Retail";
 import Brand from "../sections/BrandPartnership";
@@ -16,8 +17,8 @@ export default function Deck() {
   const [active, setActive] = useState("hero");
 
   const slides: any = {
-    hero: <Hero setActive={setActive} />,
-    why: <Why setActive={setActive} />,
+    hero: <Hero />,
+    why: <Why />,
     hub: <NavHub setActive={setActive} />,
     retail: <Retail />,
     brand: <Brand />,
@@ -28,20 +29,18 @@ export default function Deck() {
 
   return (
     <div className="w-screen h-screen overflow-hidden bg-black text-white">
-
       <AnimatePresence mode="wait">
         <motion.div
           key={active}
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
+          transition={{ duration: 0.7 }}
           className="absolute w-full h-full"
         >
           {slides[active]}
         </motion.div>
       </AnimatePresence>
-
     </div>
   );
 }
