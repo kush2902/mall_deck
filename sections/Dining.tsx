@@ -14,7 +14,8 @@ export default function Dining({ setActive }: Props) {
     <SlideWrapper>
       <BackToHub setActive={setActive} />
       <BackgroundMedia video="/videos/dining.mp4" />
-
+      
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-0" />
       <div className="relative z-10 h-full flex items-center px-20 justify-between">
 
         {/* LEFT */}
