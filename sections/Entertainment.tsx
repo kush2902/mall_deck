@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Entertainment() {
   return (
     <SlideWrapper>
-      <BackToHub />
+      <BackToHub setActive={setActive} />
 
       {/* BACKGROUND */}
       <BackgroundMedia video="/videos/events.mp4" />
