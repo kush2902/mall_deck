@@ -46,15 +46,27 @@ export default function Hero() {
           Where luxury, scale, and experience converge into one destination.
         </motion.p>
 
-        {/* SUBTLE SCROLL INDICATOR */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.5 }}
-          transition={{ delay: 2 }}
-          className="absolute bottom-10 left-16 text-sm tracking-widest"
-        >
-          SCROLL
-        </motion.div>
+       <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-10 flex gap-10 text-sm uppercase tracking-wider"
+       >
+  <div>
+    <p className="text-2xl font-bold">100M+</p>
+    <p className="opacity-60">Annual Visitors</p>
+  </div>
+
+  <div>
+    <p className="text-2xl font-bold">1200+</p>
+    <p className="opacity-60">Retail Stores</p>
+  </div>
+
+  <div>
+    <p className="text-2xl font-bold">200+</p>
+    <p className="opacity-60">Dining Options</p>
+  </div>
+</motion.div>
       </div>
     </SlideWrapper>
   );
