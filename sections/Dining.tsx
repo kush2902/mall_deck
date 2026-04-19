@@ -5,6 +5,10 @@ import BackgroundMedia from "../components/BackgroundMedia";
 import BackToHub from "../components/BackToHub";
 import { motion } from "framer-motion";
 
+type Props = {
+  setActive: (key: string) => void;
+};
+
 export default function Dining() {
   return (
     <SlideWrapper>
