@@ -1,7 +1,7 @@
 "use client";
 
-import SlideWrapper from "@/components/SlideWrapper";
-import MagneticCard from "@/components/MagneticCard";
+import SlideWrapper from "../components/SlideWrapper";
+import MagneticCard from "../components/MagneticCard";
 
 export default function Opportunities() {
   return (
