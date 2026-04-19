@@ -6,8 +6,8 @@ import Hero from "../sections/Hero";
 import Why from "../sections/Why";
 import Dining from "../sections/Dining";
 import Retail from "../sections/Retail";
-import Brand from "../sections/Brand";
-import Events from "../sections/Events";
+import Brand from "../sections/BrandPartnership";
+import Events from "../sections/EventBooking";
 import Venue from "../sections/Venue";
 import Entertainment from "../sections/Entertainment";
 
