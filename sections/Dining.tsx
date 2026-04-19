@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Dining() {
   return (
     <SlideWrapper>
-      <BackToHub />
+      <BackToHub setActive={setActive} />
       <BackgroundMedia video="/videos/dining.mp4" />
 
       <div className="relative z-10 h-full flex items-center px-20 justify-between">
