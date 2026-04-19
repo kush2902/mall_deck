@@ -1,5 +1,5 @@
 "use client";
-
+import BackgroundMedia from "../components/BackgroundMedia";
 import SlideWrapper from "../components/SlideWrapper";
 import { motion } from "framer-motion";
 
