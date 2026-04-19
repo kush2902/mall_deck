@@ -7,7 +7,7 @@ export default function RetailLeasing() {
   return (
     <SlideWrapper>
       <video autoPlay muted loop className="absolute w-full h-full object-cover">
-        <source src="/video/retail.mp4" />
+        <source src="/videos/retail.mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/60" />
