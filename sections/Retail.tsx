@@ -3,6 +3,7 @@
 import SlideWrapper from "../components/SlideWrapper";
 import BackgroundMedia from "../components/BackgroundMedia";
 import BackToHub from "../components/BackToHub";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -48,6 +49,23 @@ export default function Retail({ setActive }: Props) {
           </div>
 
         </div>
+         <motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.3 }}
+  className="relative w-[55%] h-[65%] rounded-xl overflow-hidden shadow-2xl border border-white/10"
+>
+  <Image
+    src="/images/re.jpg"
+    alt="Events"
+    fill
+    className="object-cover scale-105"
+  />
+</motion.div>
+
+      </div>
+
+        
       </div>
     </SlideWrapper>
   );
