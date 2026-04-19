@@ -1,77 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-function Counter({ target }: { target: number }) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let start = 0;
-    const duration = 1500;
-    const increment = target / (duration / 16);
-
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(timer);
-  }, [target]);
-
-  return <span>{count}</span>;
-}
+import SlideWrapper from "@/components/SlideWrapper";
+import { motion } from "framer-motion";
 
 export default function Why() {
   return (
-    <section id="why" className="relative min-h-screen flex items-center">
+    <SlideWrapper>
+      <div className="h-full flex items-center px-20">
+        <div>
+          <motion.h2
+            initial={{ opacity: 0, x: -80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="text-5xl font-bold"
+          >
+            Why This Property
+          </motion.h2>
 
-      {/* Background */}
-      <img
-        src="/images/mall.jpg"
-        className="absolute inset-0 w-full h-full object-cover opacity-20"
-      />
-
-      <div className="relative z-10 w-full px-10 md:px-20">
-        <h2 className="text-5xl mb-12">Why Dubai Mall</h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-
-          {/* Stat Card */}
-          <div className="hover-lift hover-glow p-4 rounded-lg">
-            <h3 className="text-5xl font-bold">
-              <Counter target={100} />M+
-            </h3>
-            <p className="text-gray-400">Visitors</p>
-          </div>
-
-          <div className="hover-lift hover-glow p-4 rounded-lg">
-            <h3 className="text-5xl font-bold">
-              <Counter target={1200} />+
-            </h3>
-            <p className="text-gray-400">Stores</p>
-          </div>
-
-          <div className="hover-lift hover-glow p-4 rounded-lg">
-            <h3 className="text-5xl font-bold">
-              <Counter target={59} />L+
-            </h3>
-            <p className="text-gray-400">Sq Ft</p>
-          </div>
-
-          <div className="hover-lift hover-glow p-4 rounded-lg">
-            <h3 className="text-5xl font-bold">
-              <Counter target={200} />+
-            </h3>
-            <p className="text-gray-400">Dining</p>
-          </div>
-
+          <motion.p
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            className="mt-6 text-lg opacity-70 max-w-xl"
+          >
+            World-class footfall, premium positioning, and unmatched scale.
+          </motion.p>
         </div>
       </div>
-    </section>
+    </SlideWrapper>
   );
 }
