@@ -1,50 +1,58 @@
-# 🏬 Mall Deck – Interactive Cinematic Sales Experience
+# 🏬 Mall Deck — Interactive Cinematic Sales Experience
 
 ## 🚀 Overview
 
-This project is a **cinematic, browser-based interactive sales deck** built for large-scale shopping malls (inspired by properties like Dubai Mall).
+Mall Deck is a **browser-based interactive sales presentation** designed for large-scale retail destinations.
 
-It replaces traditional fragmented sales processes (PDFs, videos, spreadsheets) with a **single immersive experience** that:
+Instead of static PDFs or slide decks, it delivers a **cinematic, full-screen experience** that combines:
 
-* Tells the story visually
-* Creates immediate emotional impact
-* Drives real business actions
+* Motion
+* Video
+* Minimal UI
+* Non-linear navigation
 
-The platform is designed to be used both:
-
-* 📞 On live sales calls (screen-shared)
-* 🌐 As a standalone interactive link
-
----
-
-## 🎯 Objective
-
-The goal is not just to showcase a mall, but to **drive commercial outcomes**:
-
-* Retail leasing deals
-* Brand sponsorship partnerships
-* Event bookings
-* Venue utilization
-
-Every section is designed to move the user toward a **conversion action**. 
+👉 The goal is simple:
+**turn storytelling into conversion.**
 
 ---
 
-## ✨ Experience Philosophy
+## 🌐 Live Demo
 
-This project follows three core principles:
+🔗 https://mall-deck.onrender.com/
+
+---
+
+## 🎯 Purpose
+
+Traditional mall sales workflows are fragmented:
+
+* PDFs
+* Brochures
+* Video links
+* Spreadsheets
+
+Mall Deck replaces all of that with a **single, immersive interface** that:
+
+* Communicates scale instantly
+* Feels premium and modern
+* Keeps users engaged
+* Guides them toward action
+
+---
+
+## ✨ Core Experience
 
 ### 🎬 Cinematic First
 
-Video is the primary storytelling medium, not decoration.
+Video is used as the **primary storytelling layer**, not decoration.
 
 ### 🧭 Non-Linear Navigation
 
-Users explore freely — not forced through slides.
+Users are not forced through slides — they **explore freely**.
 
-### 💎 Luxury UI
+### 💎 Minimal Luxury UI
 
-Inspired by premium brands (Apple, Tesla, Hermès style minimalism).
+Clean typography, motion, and spacing inspired by premium product design.
 
 ---
 
@@ -52,66 +60,72 @@ Inspired by premium brands (Apple, Tesla, Hermès style minimalism).
 
 ### 1. Hero Section
 
-* Fullscreen cinematic video
-* Immediate impact within first 5–10 seconds
+* Fullscreen video intro
+* Immediate visual impact
+* Entry point into the experience
 
-### 2. Why This Property
+---
 
-* Scale, reach, and positioning
-* Data-driven storytelling
+### 2. Why Section (Navigation Hub)
 
-### 3. Retail & Entertainment Sections
+* Core positioning of the property
+* Acts as the **main control panel**
+* Right-side navigation to all sections
 
-* Visual-first storytelling
-* Highlights of shopping, lifestyle, and attractions
+---
 
-### 4. Opportunities Section
+### 3. Retail Section
 
-* Core monetization layer:
+* Leasing-focused messaging
+* High-level stats and positioning
+* Designed for brand decision-makers
 
-  * Retail leasing
-  * Brand partnerships
-  * Events
-  * Venue usage
+---
 
-### 5. Lead Capture System
+### 4. Entertainment Section
 
-* Real enquiry form
-* Backend API (Next.js)
-* MongoDB database
-* Admin dashboard to view leads
+* Experience-driven storytelling
+* Highlights engagement, events, and repeat visits
+
+---
+
+### 5. Slide-Based Navigation System
+
+* Smooth animated transitions
+* State-driven slide switching
+* Back navigation to central hub
 
 ---
 
 ## 🧠 Architecture
 
-Built using:
+Built with a modern frontend stack:
 
-* Next.js (App Router)
-* Tailwind CSS
-* Framer Motion (animations)
-* MongoDB (lead storage)
+* **Next.js (App Router)**
+* **React**
+* **Tailwind CSS**
+* **Framer Motion**
 
-Project structure:
+---
+
+### 📁 Project Structure
 
 ```bash
 /app
 /components
 /sections
-/lib
-/models
 /public (images, videos)
 ```
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Running Locally
 
-### 1. Clone repo
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/kush2902/mall_deck.git
-cd project
+cd mall_deck
 ```
 
 ### 2. Install dependencies
@@ -120,15 +134,7 @@ cd project
 npm install
 ```
 
-### 3. Add environment variables
-
-Create `.env.local`:
-
-```env
-MONGODB_URI=your_mongodb_uri
-```
-
-### 4. Run locally
+### 3. Run development server
 
 ```bash
 npm run dev
@@ -138,110 +144,15 @@ npm run dev
 
 ## 🌐 Deployment
 
-Deployed using:
+Currently deployed on:
 
-* Netlify / Render / Vercel
+* Render
 
----
+The project is compatible with:
 
-## 🧩 Expandability (MOST IMPORTANT SECTION)
-
-This project is intentionally designed to expand into **modular business systems**, not just a static website. 
-
----
-
-### 🔹 1. Retail Leasing Module
-
-Future expansion:
-
-* Separate pages for:
-
-  * Luxury brands
-  * Mid-tier retail
-  * Pop-up spaces
-
-Features:
-
-* Floor maps with available units
-* Store size & pricing insights
-* Brand fit recommendations
-* Direct leasing CTA → lead pipeline
-
-👉 Converts interest → leasing deals
-
----
-
-### 🔹 2. Sponsorship & Brand Partnerships
-
-Future module:
-
-* Tier-based sponsorship packages:
-
-  * Platinum / Gold / Silver
-* Audience analytics:
-
-  * Footfall
-  * Demographics
-* Brand activation examples
-
-Features:
-
-* Interactive campaign previews
-* ROI simulation (traffic, impressions)
-* Partnership enquiry flows
-
-👉 Converts brands → long-term partnerships
-
----
-
-### 🔹 3. Event Booking Platform
-
-Future module:
-
-* Dedicated event booking interface
-
-Features:
-
-* Event types:
-
-  * Concerts
-  * Product launches
-  * Corporate events
-* Venue availability calendar
-* Past event highlights (video gallery)
-* Booking CTA with structured form
-
-👉 Converts interest → booked events
-
----
-
-### 🔹 4. Venue Modules (High-Value Expansion)
-
-Future modules for:
-
-* Performing Arts Centers
-* Expo / Convention Halls
-
-Features:
-
-* 3D walkthroughs / virtual tours
-* Capacity + technical specs
-* Stage layouts
-* Booking workflows
-
-👉 Converts production companies → venue bookings
-
----
-
-## 🔄 Long-Term Vision
-
-This project can evolve into a **full commercial operating system for malls**:
-
-* CRM for leads
-* Analytics dashboard
-* Real-time availability tracking
-* AI-based tenant recommendations
-* Automated sales pipelines
+* Vercel
+* Netlify
+* render
 
 ---
 
@@ -249,63 +160,95 @@ This project can evolve into a **full commercial operating system for malls**:
 
 Inspired by:
 
-* Luxury brands (Apple, Tesla)
-* Experiential platforms (Disney, Universal)
-* Interactive digidecks
+* Apple product pages
+* Tesla website interactions
+* Luxury brand minimalism
 
-Goal:
+Focus:
 
-> Make users feel: *“I want to be part of this.”* 
-
----
-
-## ⚡ Performance Goals
-
-* Fast loading (lazy loading assets)
-* Video optimization
-* Smooth animations
-* Responsive design
+* Motion over clutter
+* Typography over decoration
+* Experience over information
 
 ---
 
-## 🤖 AI Usage
+## ⚡ Performance Considerations
 
-AI was used for:
+* Fullscreen video backgrounds
+* Optimized layout rendering
+* Smooth transitions using Framer Motion
+* Lightweight component structure
 
-* Generating visual assets
-* Designing layouts
-* Structuring UX flows
-* Accelerating development
+---
+
+## 🔄 Future Scope
+
+This project is intentionally built as a **foundation**, not a finished product.
+
+Planned expansions include:
+
+### 🔹 Retail Leasing Module
+
+* Floor maps
+* Availability
+* Brand targeting
+
+### 🔹 Brand Partnerships
+
+* Sponsorship tiers
+* Audience insights
+* Campaign showcases
+
+### 🔹 Event Booking System
+
+* Venue selection
+* Calendar-based booking
+* Event case studies
+
+### 🔹 Venue Experience Modules
+
+* Virtual walkthroughs
+* Capacity + specs
+* Booking flows
+
+---
+
+## 🔮 Long-Term Vision
+
+Mall Deck can evolve into a **complete commercial interface for malls**, including:
+
+* Lead capture systems
+* CRM integrations
+* Analytics dashboards
+* AI-driven recommendations
 
 ---
 
 ## 📈 What Makes This Different
 
 This is not:
-❌ A static website
-❌ A converted PowerPoint
+
+* ❌ A static website
+* ❌ A converted PowerPoint
 
 This is:
-✅ A **cinematic sales tool**
-✅ A **conversion-driven platform**
-✅ A **scalable product architecture**
+
+* ✅ A cinematic sales interface
+* ✅ A product-driven presentation system
+* ✅ A scalable experience layer
 
 ---
 
-## 🔮 Future Improvements
+## 👤 Author
 
-* Authentication for admin dashboard
-* Analytics tracking (user behavior)
-* Video optimization (CDN streaming)
-* Interactive floor maps
-* AI-powered personalization
+Built as a product-focused project exploring the intersection of:
+
+* Design
+* Engineering
+* Business storytelling
 
 ---
 
 ## 📬 Contact
 
-For inquiries or collaboration, reach out.
-
----
-
-> Built as part of a product-thinking evaluation project — focusing on design, engineering, and business impact.
+Open to feedback, collaboration, and ideas.
