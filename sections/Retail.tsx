@@ -9,7 +9,7 @@ export default function Retail() {
   return (
     <SlideWrapper>
       <BackToHub />
-      <BackgroundMedia video="/video/retail.mp4" />
+      <BackgroundMedia video="/videos/retail.mp4" />
 
       <div className="relative z-10 h-full flex items-center px-20">
         <div>
