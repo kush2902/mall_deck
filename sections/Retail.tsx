@@ -4,10 +4,10 @@ import SlideWrapper from "../components/SlideWrapper";
 
 export default function Retail() {
   return (
-    <SlideWrapper>
-      <video autoPlay muted loop className="absolute w-full h-full object-cover">
-        <source src="YOUR_RETAIL_VIDEO_URL" />
-      </video>
+   <SlideWrapper>
+      {/* BACKGROUND IMAGE */}
+      <BackgroundMedia image="/images/retail.jpg" />
+
 
       <div className="absolute inset-0 bg-black/40" />
 
