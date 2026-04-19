@@ -13,7 +13,20 @@ export default function Deck({ children }: DeckProps) {
 
   const totalSlides = children.length;
 
-  // 🔥 GO TO SPECIFIC SLIDE (used by NavHub)
+  const titles = [
+    "Intro",
+    "Why",
+    "Explore",
+    "Retail",
+    "Dining",
+    "Entertainment",
+    "Leasing",
+    "Partnerships",
+    "Events",
+    "Venues"
+  ];
+
+  // 🔥 NavHub support
   useEffect(() => {
     const handler = (e: any) => {
       if (typeof e.detail === "number") {
@@ -25,7 +38,7 @@ export default function Deck({ children }: DeckProps) {
     return () => window.removeEventListener("goToSlide", handler);
   }, []);
 
-  // 🔥 SCROLL CONTROL (one slide per scroll)
+  // 🔥 Scroll navigation
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (isAnimating) return;
@@ -41,9 +54,9 @@ export default function Deck({ children }: DeckProps) {
 
     window.addEventListener("wheel", handleWheel);
     return () => window.removeEventListener("wheel", handleWheel);
-  }, [index, isAnimating, totalSlides]);
+  }, [index, isAnimating]);
 
-  // 🔥 KEYBOARD NAVIGATION
+  // 🔥 Keyboard nav
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (isAnimating) return;
@@ -59,49 +72,46 @@ export default function Deck({ children }: DeckProps) {
 
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [index, isAnimating, totalSlides]);
+  }, [index, isAnimating]);
 
-  // 🔥 RESET ANIMATION LOCK
+  // 🔥 Animation lock reset
   useEffect(() => {
-    const timeout = setTimeout(() => setIsAnimating(false), 900);
-    return () => clearTimeout(timeout);
+    const t = setTimeout(() => setIsAnimating(false), 800);
+    return () => clearTimeout(t);
   }, [index]);
 
   return (
     <div className="h-screen w-screen overflow-hidden bg-black text-white relative">
-      
+
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
-          initial={{ opacity: 0, y: 80, scale: 0.98 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: -60, scale: 0.98 }}
-          transition={{
-            duration: 0.8,
-            ease: [0.22, 1, 0.36, 1], // premium easing
-          }}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.98 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0"
         >
           {children[index]}
         </motion.div>
       </AnimatePresence>
 
-      {/* 🔥 PROGRESS INDICATOR (right side) */}
+      {/* PROGRESS */}
       <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
         {children.map((_, i) => (
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`w-2 h-8 rounded-full transition-all duration-300 ${
+            className={`w-2 h-8 rounded-full transition-all ${
               i === index ? "bg-white scale-125" : "bg-white/30"
             }`}
           />
         ))}
       </div>
 
-      {/* 🔥 SLIDE COUNT */}
-      <div className="absolute bottom-6 right-8 text-xs opacity-50 tracking-widest">
-        {index + 1} / {totalSlides}
+      {/* TITLE */}
+      <div className="absolute bottom-6 left-8 text-xs opacity-60 tracking-widest">
+        {titles[index]}
       </div>
     </div>
   );
