@@ -7,7 +7,7 @@ export default function Entertainment() {
   return (
     <SlideWrapper>
       <video autoPlay muted loop className="absolute w-full h-full object-cover">
-        <source src="YOUR_EVENTS_VIDEO_URL" />
+        <source src="/vedios/entertainment.mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/40" />
