@@ -3,59 +3,54 @@
 import SlideWrapper from "../components/SlideWrapper";
 import { motion } from "framer-motion";
 
-export default function NavHub() {
-  const go = (index: number) => {
-    window.dispatchEvent(new CustomEvent("goToSlide", { detail: index }));
-  };
+export default function NavHub({ setActive }: any) {
+  const items = [
+    { label: "Retail Leasing", key: "retail" },
+    { label: "Brand Partnerships", key: "brand" },
+    { label: "Entertainment", key: "entertainment" },
+    { label: "Dining", key: "dining" },
+    { label: "Venue Monetisation", key: "venue" },
+  ];
 
   return (
     <SlideWrapper>
-      <div className="relative z-10 h-full flex flex-col justify-center px-20">
+
+      <div className="h-full flex flex-col items-center justify-center text-center">
 
         <motion.h2
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-5xl font-bold mb-12"
         >
-          Explore the Opportunity
+          Explore Opportunities
         </motion.h2>
 
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-2 gap-8">
 
-          <motion.button
-            onClick={() => go(3)}
-            whileHover={{ scale: 1.05 }}
-            className="p-10 border border-white/20 rounded-2xl bg-white/5 backdrop-blur-md"
-          >
-            Retail
-          </motion.button>
-
-          <motion.button
-            onClick={() => go(4)}
-            whileHover={{ scale: 1.05 }}
-            className="p-10 border border-white/20 rounded-2xl bg-white/5 backdrop-blur-md"
-          >
-            Dining
-          </motion.button>
-
-          <motion.button
-            onClick={() => go(5)}
-            whileHover={{ scale: 1.05 }}
-            className="p-10 border border-white/20 rounded-2xl bg-white/5 backdrop-blur-md"
-          >
-            Entertainment
-          </motion.button>
-
-          <motion.button
-            onClick={() => go(6)}
-            whileHover={{ scale: 1.05 }}
-            className="p-10 border border-white/20 rounded-2xl bg-white/5 backdrop-blur-md"
-          >
-            Leasing & Partnerships
-          </motion.button>
+          {items.map((item, i) => (
+            <motion.button
+              key={i}
+              onClick={() => setActive(item.key)}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              className="
+                px-10 py-6 border border-white/20 rounded-xl
+                backdrop-blur-md bg-white/5
+                hover:bg-white/10 hover:scale-105
+                hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]
+                transition-all duration-500
+                text-lg tracking-wide
+              "
+            >
+              {item.label}
+            </motion.button>
+          ))}
 
         </div>
+
       </div>
+
     </SlideWrapper>
   );
 }
