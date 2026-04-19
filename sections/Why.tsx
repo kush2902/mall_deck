@@ -2,7 +2,6 @@
 
 import SlideWrapper from "../components/SlideWrapper";
 import BackgroundMedia from "../components/BackgroundMedia";
-import BackToHub from "../components/BackToHub";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -11,9 +10,6 @@ type Props = {
 
 export default function Why({ setActive }: Props) {
   const sections = [
-    { key: "hero", label: "Intro" },
-    { key: "why", label: "Why Dubai Mall" },
-    { key: "hub", label: "Navigation Hub" },
     { key: "retail", label: "Retail" },
     { key: "brand", label: "Brand Partnerships" },
     { key: "entertainment", label: "Entertainment" },
@@ -23,9 +19,6 @@ export default function Why({ setActive }: Props) {
 
   return (
     <SlideWrapper>
-      {/* BACK BUTTON */}
-      <BackToHub setActive={setActive} />
-
       {/* BACKGROUND */}
       <BackgroundMedia image="/images/why.jpg" />
 
@@ -74,21 +67,29 @@ export default function Why({ setActive }: Props) {
         </div>
       </div>
 
-      {/* 👉 RIGHT SIDE INDEX NAVIGATION */}
-      <div className="absolute right-10 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-4 text-right">
+      {/* 👉 RIGHT SIDE NAV (YOUR MAIN CONTROL PANEL) */}
+      <div className="absolute right-12 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-5 text-right">
         {sections.map((item, index) => (
           <motion.button
             key={item.key}
             onClick={() => setActive(item.key)}
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 0.7, x: 0 }}
-            transition={{ delay: index * 0.08 }}
-            className="text-sm uppercase tracking-wider hover:opacity-100 transition"
+            transition={{ delay: index * 0.1 }}
+            className="text-sm uppercase tracking-widest hover:opacity-100 transition"
           >
             {item.label}
           </motion.button>
         ))}
       </div>
+
+      {/* OPTIONAL: subtle hint to go back to intro */}
+      <button
+        onClick={() => setActive("hero")}
+        className="absolute bottom-8 left-10 text-xs opacity-50 hover:opacity-100 transition"
+      >
+        ← Back to Intro
+      </button>
     </SlideWrapper>
   );
 }
