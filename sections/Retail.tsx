@@ -52,25 +52,6 @@ export default function Retail({ setActive }: Props) {
               <p className="opacity-60">Conversion</p>
             </div>
           </div>
-        </div>
-
-        {/* RIGHT IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
-          whileHover={{ scale: 1.02 }}
-          className="relative w-[55%] h-[65%] rounded-xl overflow-hidden shadow-2xl border border-white/10"
-        >
-          <Image
-            src="/images/re.jpg"
-            alt="Retail"
-            fill
-            className="object-cover scale-105"
-          />
-        </motion.div>
-
-      </div>
     </SlideWrapper>
   );
 }
