@@ -14,13 +14,18 @@ export default function Retail({ setActive }: Props) {
   return (
     <SlideWrapper>
       <BackToHub setActive={setActive} />
+
       <BackgroundMedia video="/videos/retail.mp4" />
+
+      {/* GRADIENT OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-0" />
 
-      <div className="relative z-10 h-full flex items-center px-20">
-        <div>
-
-          <h2 className="text-5xl font-bold">
+      {/* MAIN CONTENT */}
+      <div className="relative z-10 h-full flex items-center justify-between px-20">
+        
+        {/* LEFT CONTENT */}
+        <div className="max-w-xl">
+          <h2 className="text-6xl font-bold tracking-tight">
             Retail Leasing
           </h2>
 
@@ -47,25 +52,24 @@ export default function Retail({ setActive }: Props) {
               <p className="opacity-60">Conversion</p>
             </div>
           </div>
-
         </div>
-         <motion.div
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ delay: 0.3 }}
-  className="relative w-[55%] h-[65%] rounded-xl overflow-hidden shadow-2xl border border-white/10"
->
-  <Image
-    src="/images/re.jpg"
-    alt="Events"
-    fill
-    className="object-cover scale-105"
-  />
-</motion.div>
 
-      </div>
+        {/* RIGHT IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3 }}
+          whileHover={{ scale: 1.02 }}
+          className="relative w-[55%] h-[65%] rounded-xl overflow-hidden shadow-2xl border border-white/10"
+        >
+          <Image
+            src="/images/re.jpg"
+            alt="Retail"
+            fill
+            className="object-cover scale-105"
+          />
+        </motion.div>
 
-        
       </div>
     </SlideWrapper>
   );
