@@ -8,18 +8,35 @@ export default function Opportunities() {
     <SlideWrapper>
       <div className="h-full flex items-center px-20">
         <div className="grid grid-cols-2 gap-12">
-          {[
-            "Retail Leasing",
-            "Brand Partnerships",
-            "Event Bookings",
-            "Venue Monetization",
-          ].map((item, i) => (
-            <MagneticCard key={i}>
-              <div className="border border-white/20 p-10 rounded-2xl backdrop-blur-lg bg-white/5 hover:bg-white/10 transition-all">
-                <h3 className="text-xl">{item}</h3>
-              </div>
-            </MagneticCard>
-          ))}
+
+          <MagneticCard>
+            <button onClick={() => window.dispatchEvent(new Event("goToRetail"))}
+              className="border p-10 rounded-2xl bg-white/5 hover:bg-white/10">
+              Retail Leasing
+            </button>
+          </MagneticCard>
+
+          <MagneticCard>
+            <button onClick={() => window.dispatchEvent(new Event("goToBrand"))}
+              className="border p-10 rounded-2xl bg-white/5 hover:bg-white/10">
+              Brand Partnerships
+            </button>
+          </MagneticCard>
+
+          <MagneticCard>
+            <button onClick={() => window.dispatchEvent(new Event("goToEvent"))}
+              className="border p-10 rounded-2xl bg-white/5 hover:bg-white/10">
+              Event Booking
+            </button>
+          </MagneticCard>
+
+          <MagneticCard>
+            <button onClick={() => window.dispatchEvent(new Event("goToVenue"))}
+              className="border p-10 rounded-2xl bg-white/5 hover:bg-white/10">
+              Venue Monetization
+            </button>
+          </MagneticCard>
+
         </div>
       </div>
     </SlideWrapper>
