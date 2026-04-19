@@ -3,7 +3,6 @@
 import SlideWrapper from "../components/SlideWrapper";
 import BackgroundMedia from "../components/BackgroundMedia";
 import BackToHub from "../components/BackToHub";
-import { motion } from "framer-motion";
 
 export default function Retail() {
   return (
@@ -14,13 +13,13 @@ export default function Retail() {
       <div className="relative z-10 h-full flex items-center px-20">
         <div>
 
-          <motion.h2 className="text-5xl font-bold">
+          <h2 className="text-5xl font-bold">
             Retail Excellence
-          </motion.h2>
+          </h2>
 
-          <motion.p className="mt-6 text-lg opacity-80">
-            Flagship brands, luxury anchors, and global retail powerhouses.
-          </motion.p>
+          <p className="mt-6 text-lg opacity-80">
+            Flagship brands, luxury anchors, and global retail leaders.
+          </p>
 
           <div className="mt-10 flex gap-10 text-sm uppercase">
             <div>
@@ -35,6 +34,9 @@ export default function Retail() {
 
         </div>
       </div>
+    </SlideWrapper>
+  );
+}      </div>
     </SlideWrapper>
   );
 }
