@@ -1,6 +1,10 @@
 "use client";
 
-export default function BackToHub({ setActive }: any) {
+type Props = {
+  setActive: (key: string) => void;
+};
+
+export default function BackToHub({ setActive }: Props) {
   return (
     <button
       onClick={() => setActive("hub")}
