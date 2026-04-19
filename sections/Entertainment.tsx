@@ -73,6 +73,7 @@ export default function Entertainment({ setActive }: Props) {
           <img
            src="/images/aqua.jpg"
            alt="Events"
+           fill
            className="w-full h-full object-cover scale-105"
           />
         </motion.div>
