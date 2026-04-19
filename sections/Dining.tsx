@@ -54,10 +54,22 @@ export default function Dining() {
             transition={{ delay: 0.5 }}
             className="grid grid-cols-2 gap-6"
           >
-            <div className="w-40 h-52 bg-white/10 backdrop-blur-md rounded-xl border border-white/20" />
-            <div className="w-40 h-52 bg-white/10 backdrop-blur-md rounded-xl border border-white/20" />
-            <div className="w-40 h-52 bg-white/10 backdrop-blur-md rounded-xl border border-white/20" />
-            <div className="w-40 h-52 bg-white/10 backdrop-blur-md rounded-xl border border-white/20" />
+            <div
+              className="w-40 h-52 rounded-xl bg-cover bg-center"
+              style={{ backgroundImage: "url('/images/food1.jpg')" }}
+            />
+            <div
+               className="w-40 h-52 rounded-xl bg-cover bg-center"
+               style={{ backgroundImage: "url('/images/food2.jpg')" }}
+            />
+            <div
+               className="w-40 h-52 rounded-xl bg-cover bg-center"
+               style={{ backgroundImage: "url('/images/food3.jpg')" }}
+            />
+            <div
+                className="w-40 h-52 rounded-xl bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/food4.jpg')" }}
+            />
           </motion.div>
 
         </div>
