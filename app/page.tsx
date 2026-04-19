@@ -1,37 +1,19 @@
-"use client";
+import Deck from "@/components/Deck";
 
-import { useState } from "react";
+import Hero from "@/sections/Hero";
+import Why from "@/sections/Why";
+import Retail from "@/sections/Retail";
+import Entertainment from "@/sections/Entertainment";
+import Opportunities from "@/sections/Opportunities";
 
-import Loader from "../components/Loader";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Opportunities from "../sections/Opportunities";
-import Hero from "../sections/Hero";
-import Why from "../sections/Why";
-import Retail from "../sections/Retail";
-import Entertainment from "../sections/Entertainment";
-import Events from "../sections/Events";
-
-export default function Page() {
-  const [loaded, setLoaded] = useState(false);
-
+export default function Home() {
   return (
-    <>
-      <Header />
-
-      {!loaded && <Loader onFinish={() => setLoaded(true)} />}
-
-      {loaded && (
-        <>
-          <Hero />
-          <Why />
-          <Retail />
-          <Entertainment />
-          <Events />
-          <Opportunities />
-          <Footer />
-        </>
-      )}
-    </>
+    <Deck>
+      <Hero />
+      <Why />
+      <Retail />
+      <Entertainment />
+      <Opportunities />
+    </Deck>
   );
 }
