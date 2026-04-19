@@ -4,6 +4,7 @@ import SlideWrapper from "../components/SlideWrapper";
 import BackgroundMedia from "../components/BackgroundMedia";
 import BackToHub from "../components/BackToHub";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Props = {
   setActive: (key: string) => void;
@@ -64,22 +65,19 @@ export default function Venue({ setActive }: Props) {
 
         </div>
 
-        {/* RIGHT VIDEO */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
-          className="w-[520px] h-[340px] rounded-xl overflow-hidden shadow-2xl border border-white/10"
-        >
-          <video
-            src="/videos/venue.mp4"
-            autoPlay
-            muted
-            loop
-            className="w-full h-full object-cover scale-105"
-          />
-        </motion.div>
-
+         <motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.3 }}
+  className="relative w-[55%] h-[65%] rounded-xl overflow-hidden shadow-2xl border border-white/10"
+>
+  <Image
+    src="/images/art.jpg"
+    alt="Events"
+    fill
+    className="object-cover scale-105"
+  />
+</motion.div>
       </div>
     </SlideWrapper>
   );
