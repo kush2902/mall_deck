@@ -67,23 +67,29 @@ export default function Why({ setActive }: Props) {
         </div>
       </div>
 
-      {/* 👉 RIGHT SIDE NAV (YOUR MAIN CONTROL PANEL) */}
-      <div className="absolute right-12 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-5 text-right">
+      {/* 🔥 UPGRADED RIGHT SIDE NAV */}
+      <div className="absolute right-10 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-4">
         {sections.map((item, index) => (
           <motion.button
             key={item.key}
             onClick={() => setActive(item.key)}
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 0.7, x: 0 }}
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="text-sm uppercase tracking-widest hover:opacity-100 transition"
+            whileHover={{ scale: 1.05, x: -4 }}
+            whileTap={{ scale: 0.96 }}
+            className="px-6 py-3 rounded-xl backdrop-blur-md 
+                       bg-white/10 border border-white/20 
+                       text-white text-sm tracking-wide
+                       shadow-lg hover:bg-white/20 
+                       transition-all duration-300"
           >
             {item.label}
           </motion.button>
         ))}
       </div>
 
-      {/* OPTIONAL: subtle hint to go back to intro */}
+      {/* BACK TO HERO */}
       <button
         onClick={() => setActive("hero")}
         className="absolute bottom-8 left-10 text-xs opacity-50 hover:opacity-100 transition"
