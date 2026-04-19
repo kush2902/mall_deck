@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Venue() {
   return (
     <SlideWrapper>
-      <BackToHub />
+      <BackToHub setActive={setActive} />
 
       {/* BACKGROUND */}
       <BackgroundMedia video="/videos/venue.mp4" />
