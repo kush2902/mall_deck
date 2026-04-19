@@ -23,7 +23,8 @@ export default function Why({ setActive }: Props) {
       <BackgroundMedia image="/images/why.jpg" />
 
       {/* MAIN CONTENT */}
-      <div className="relative z-10 h-full flex items-center px-20">
+     <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-0" />
+     <div className="relative z-10 h-full flex items-center px-20">
         <div className="max-w-2xl">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
