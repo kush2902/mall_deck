@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Why() {
   return (
     <SlideWrapper>
-      <BackToHub />
+      <BackToHub setActive={setActive} />
       <BackgroundMedia image="/images/why.jpg" />
 
       <div className="relative z-10 h-full flex items-center px-20">
