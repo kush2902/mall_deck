@@ -7,7 +7,7 @@ export default function EventBooking() {
   return (
     <SlideWrapper>
       <video autoPlay muted loop className="absolute w-full h-full object-cover">
-        <source src="/video/events.mp4" />
+        <source src="/videos/events.mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/60" />
