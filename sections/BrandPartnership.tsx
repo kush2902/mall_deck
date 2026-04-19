@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Brand() {
   return (
     <SlideWrapper>
-      <BackToHub />
+      <BackToHub setActive={setActive} />
 
       {/* BACKGROUND VIDEO */}
       <BackgroundMedia video="/videos/store.mp4" />
