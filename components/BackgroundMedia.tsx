@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function BackgroundMedia({
   video,
   image,
@@ -10,39 +8,29 @@ export default function BackgroundMedia({
   image?: string;
 }) {
   return (
-    <>
-      {/* VIDEO */}
+    <div className="absolute inset-0 z-0 overflow-hidden">
       {video && (
-        <motion.video
+        <video
+          src={video}
           autoPlay
           muted
           loop
-          playsInline
-          className="absolute w-full h-full object-cover"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 8, ease: "easeOut" }}
-        >
-          <source src={video} type="video/mp4" />
-        </motion.video>
-      )}
-
-      {/* IMAGE */}
-      {!video && image && (
-        <motion.div
-          className="absolute w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${image})` }}
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 8 }}
+          className="w-full h-full object-cover"
         />
       )}
 
-      {/* OVERLAY */}
-      <div className="absolute inset-0 bg-black/60" />
+      {image && !video && (
+        <div
+          className="w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      )}
 
-      {/* GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70" />
-    </>
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* DEPTH GRADIENT */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
+    </div>
   );
 }
