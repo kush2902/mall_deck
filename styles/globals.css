@@ -79,3 +79,13 @@ section {
 .nav-link:hover::after {
   width: 100%;
 }
+
+@keyframes zoom {
+  0% { transform: scale(1.05); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1.05); }
+}
+
+.animate-zoom {
+  animation: zoom 20s ease-in-out infinite;
+}
