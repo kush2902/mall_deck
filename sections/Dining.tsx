@@ -2,77 +2,55 @@
 
 import SlideWrapper from "../components/SlideWrapper";
 import BackgroundMedia from "../components/BackgroundMedia";
+import BackToHub from "../components/BackToHub";
 import { motion } from "framer-motion";
 
 export default function Dining() {
   return (
     <SlideWrapper>
+      <BackToHub />
       <BackgroundMedia video="/videos/dining.mp4" />
 
-      <div className="relative z-10 h-full flex items-center px-20">
-        <div className="w-full flex justify-between items-center">
+      <div className="relative z-10 h-full flex items-center px-20 justify-between">
 
-          {/* LEFT CONTENT */}
-          <div className="max-w-xl">
-            <motion.h2
-              initial={{ opacity: 0, y: 80 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl font-bold"
-            >
-              Dining & Food Experience
-            </motion.h2>
+        {/* LEFT */}
+        <div className="max-w-xl">
+          <motion.h2 className="text-5xl font-bold">
+            Dining Experience
+          </motion.h2>
 
-            <motion.p
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 0.85, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-6 text-lg"
-            >
-              A global culinary destination offering fine dining,
-              luxury cafes, and high-footfall food zones.
-            </motion.p>
+          <motion.p className="mt-6 text-lg opacity-80">
+            From luxury fine dining to global food brands,
+            a high-spend culinary ecosystem.
+          </motion.p>
 
-            {/* STATS */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="mt-10 grid grid-cols-2 gap-6 text-sm opacity-80"
-            >
-              <div>+ 200 Dining Brands</div>
-              <div>Luxury Fine Dining</div>
-              <div>Global Cuisine</div>
-              <div>High Spend Visitors</div>
-            </motion.div>
+          <div className="mt-10 flex gap-10 text-sm uppercase">
+            <div>
+              <p className="text-2xl font-bold">200+</p>
+              <p className="opacity-60">Brands</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold">Premium</p>
+              <p className="opacity-60">Dining</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold">High</p>
+              <p className="opacity-60">Spend</p>
+            </div>
           </div>
-
-          {/* RIGHT VISUAL CARDS */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 }}
-            className="grid grid-cols-2 gap-6"
-          >
-            <div
-              className="w-40 h-52 rounded-xl bg-cover bg-center"
-              style={{ backgroundImage: "url('/images/food1.jpg')" }}
-            />
-            <div
-               className="w-40 h-52 rounded-xl bg-cover bg-center"
-               style={{ backgroundImage: "url('/images/food2.jpg')" }}
-            />
-            <div
-               className="w-40 h-52 rounded-xl bg-cover bg-center"
-               style={{ backgroundImage: "url('/images/food3.jpg')" }}
-            />
-            <div
-                className="w-40 h-52 rounded-xl bg-cover bg-center"
-                style={{ backgroundImage: "url('/images/food4.jpg')" }}
-            />
-          </motion.div>
-
         </div>
+
+        {/* RIGHT CARDS */}
+        <div className="grid grid-cols-2 gap-6">
+          {["food1.jpg","food2.jpg","food3.jpg","food4.jpg"].map((img, i) => (
+            <div
+              key={i}
+              className="w-40 h-52 rounded-xl bg-cover bg-center transition-all duration-500 hover:scale-110"
+              style={{ backgroundImage: `url(/images/${img})` }}
+            />
+          ))}
+        </div>
+
       </div>
     </SlideWrapper>
   );
