@@ -16,34 +16,6 @@ import Entertainment from "../sections/Entertainment";
 export default function Deck() {
   const [active, setActive] = useState("hero");
 
-  const slides: any = {
-    hero: <Hero />,
-    why: <Why />,
-    hub: <NavHub setActive={setActive} />,
-    brand: <Brand setActive={setActive} />,
-    entertainment: <Entertainment setActive={setActive} />,
-    dining: <Dining setActive={setActive} />,
-    venue: <Venue setActive={setActive} />,
-    retail: <Retail setActive={setActive} />,
-  };
-
-"use client";
-
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-
-import Hero from "../sections/Hero";
-import Why from "../sections/Why";
-import NavHub from "../sections/NavHub";
-import Retail from "../sections/Retail";
-import BrandPartnership from "../sections/BrandPartnership";
-import Entertainment from "../sections/Entertainment";
-import Dining from "../sections/Dining";
-import Venue from "../sections/Venue";
-
-export default function Deck() {
-  const [active, setActive] = useState("hero");
-
   const slides = {
     hero: <Hero setActive={setActive} />,
     why: <Why setActive={setActive} />,
