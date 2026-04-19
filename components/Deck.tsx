@@ -20,11 +20,11 @@ export default function Deck() {
     hero: <Hero />,
     why: <Why />,
     hub: <NavHub setActive={setActive} />,
-    retail: <Retail />,
-    brand: <Brand />,
-    entertainment: <Entertainment />,
-    dining: <Dining />,
-    venue: <Venue />,
+    brand: <Brand setActive={setActive} />,
+    entertainment: <Entertainment setActive={setActive} />,
+    dining: <Dining setActive={setActive} />,
+    venue: <Venue setActive={setActive} />,
+    retail: <Retail setActive={setActive} />,
   };
 
   return (
