@@ -1,6 +1,7 @@
 "use client";
 
 import SlideWrapper from "../components/SlideWrapper";
+import BackgroundMedia from "../components/BackgroundMedia";
 
 export default function RetailLeasing() {
   return (
