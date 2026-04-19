@@ -1,10 +1,10 @@
-import Deck from "@/components/Deck";
+import Deck from "../components/Deck";
 
-import Hero from "@/sections/Hero";
-import Why from "@/sections/Why";
-import Retail from "@/sections/Retail";
-import Entertainment from "@/sections/Entertainment";
-import Opportunities from "@/sections/Opportunities";
+import Hero from "../sections/Hero";
+import Why from "../sections/Why";
+import Retail from "../sections/Retail";
+import Entertainment from "../sections/Entertainment";
+import Opportunities from "../sections/Opportunities";
 
 export default function Home() {
   return (
