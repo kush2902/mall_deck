@@ -27,16 +27,49 @@ export default function Deck() {
     venue: <Venue setActive={setActive} />,
   };
 
+  // 🎥 Map each slide to a background video
+  const videos: Record<string, string> = {
+    hero: "https://res.cloudinary.com/dv8ywrti6/video/upload/v1776364998/Untitled_design-2_f6y0ig.mp4",
+    why: "/videos/why.mp4",
+    retail: "/videos/retail.mp4",
+    brand: "/videos/brand.mp4",
+    entertainment: "/videos/entertainment.mp4",
+    dining: "/videos/dining.mp4",
+    venue: "/videos/venue.mp4",
+    hub: "/videos/hub.mp4",
+  };
+
   return (
-    <div className="w-screen h-screen overflow-hidden bg-black text-white">
-      <AnimatePresence mode="wait">
+    <div className="w-screen h-screen overflow-hidden bg-black text-white relative">
+      
+      {/* 🔥 PERSISTENT BACKGROUND VIDEO */}
+      <motion.video
+        key={videos[active]}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute w-full h-full object-cover z-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <source src={videos[active]} type="video/mp4" />
+      </motion.video>
+
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
+
+      {/* 🎬 SLIDE CONTENT ONLY */}
+      <AnimatePresence>
         <motion.div
           key={active}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-          className="absolute w-full h-full"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -40 }}
+          transition={{ duration: 0.6 }}
+          className="absolute w-full h-full z-10"
         >
           {slides[active as keyof typeof slides]}
         </motion.div>
