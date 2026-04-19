@@ -21,7 +21,10 @@ export default function Deck({ children }: any) {
 
   useEffect(() => {
     let locked = false;
-
+    window.addEventListener("goToRetail", () => setIndex(5));
+    window.addEventListener("goToBrand", () => setIndex(6));
+    window.addEventListener("goToEvent", () => setIndex(7));
+    window.addEventListener("goToVenue", () => setIndex(8));
     const handleWheel = (e: WheelEvent) => {
       if (locked) return;
 
