@@ -9,7 +9,7 @@ type Props = {
   setActive: (key: string) => void;
 };
 
-export default function Venue() {
+export default function Venue({ setActive }: Props) {
   return (
     <SlideWrapper>
       <BackToHub setActive={setActive} />
