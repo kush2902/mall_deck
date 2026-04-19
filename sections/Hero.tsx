@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 type Props = {
   setActive: (key: string) => void;
 };
-export default function Hero() {
+export default function Hero({ setActive }: Props) {
   return (
     <SlideWrapper>
       {/* BACKGROUND VIDEO WITH ZOOM */}
