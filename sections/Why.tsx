@@ -3,7 +3,7 @@
 import SlideWrapper from "../components/SlideWrapper";
 import BackgroundMedia from "../components/BackgroundMedia";
 import { motion } from "framer-motion";
-
+import BackToHub from "../components/BackToHub";
 export default function Why() {
   return (
     <SlideWrapper>
@@ -57,5 +57,6 @@ export default function Why() {
         </div>
       </div>
     </SlideWrapper>
+    <BackToHub />
   );
 }
