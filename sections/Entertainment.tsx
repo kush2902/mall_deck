@@ -72,7 +72,7 @@ export default function Entertainment({ setActive }: Props) {
   className="relative w-[55%] h-[65%] rounded-xl overflow-hidden shadow-2xl border border-white/10"
 >
   <Image
-    src="/images/aqua.jpg"
+    src="/images/aq1.jpg"
     alt="Events"
     fill
     className="object-cover scale-105"
