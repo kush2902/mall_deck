@@ -1,6 +1,6 @@
 "use client";
 
-import SlideWrapper from "@/components/SlideWrapper";
+import SlideWrapper from "../components/SlideWrapper";
 
 export default function Entertainment() {
   return (
