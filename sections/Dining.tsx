@@ -8,7 +8,7 @@ export default function Dining() {
   return (
     <SlideWrapper>
       {/* BACKGROUND VIDEO */}
-      <BackgroundMedia video="/video/dining.mp4" />
+      <BackgroundMedia video="/videos/dining.mp4" />
 
       <div className="relative z-10 h-full flex items-center px-20">
         <div className="max-w-2xl">
