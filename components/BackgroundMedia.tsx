@@ -8,29 +8,26 @@ export default function BackgroundMedia({
   image?: string;
 }) {
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden">
+    <div className="absolute inset-0 z-[-1] overflow-hidden">
+
       {video && (
         <video
           src={video}
           autoPlay
           muted
           loop
-          className="w-full h-full object-cover"
+          playsInline
+          className="w-full h-full object-cover scale-105 animate-zoom"
         />
       )}
 
-      {image && !video && (
-        <div
-          className="w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${image})` }}
+      {image && (
+        <img
+          src={image}
+          className="w-full h-full object-cover scale-105 animate-zoom"
         />
       )}
 
-      {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      {/* DEPTH GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
     </div>
   );
 }
