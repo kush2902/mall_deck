@@ -1,12 +1,11 @@
 "use client";
 
+import SlideWrapper from "@/components/SlideWrapper";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-
-      {/* 🎥 Background Video */}
+    <SlideWrapper>
       <video
         autoPlay
         muted
@@ -14,36 +13,30 @@ export default function Hero() {
         playsInline
         className="absolute w-full h-full object-cover"
       >
-        <source src="https://res.cloudinary.com/dv8ywrti6/video/upload/v1776364998/Untitled_design-2_f6y0ig.mp4" type="video/mp4" />
+        <source src="YOUR_HERO_VIDEO_URL" />
       </video>
 
-      {/* 🌑 Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-6">
-
-        {/* Title */}
+      <div className="relative z-10 h-full flex flex-col justify-center px-16">
         <motion.h1
-          initial={{ opacity: 0, y: 80 }}
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-6xl md:text-8xl font-bold"
+          transition={{ delay: 0.4, duration: 1 }}
+          className="text-7xl font-bold"
         >
           Dubai Mall
         </motion.h1>
 
-        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="mt-6 text-gray-300 text-lg"
+          transition={{ delay: 0.8, duration: 1 }}
+          className="text-xl mt-4 opacity-80"
         >
-          A Cinematic Retail Experience
+          A Global Destination for Retail, Luxury & Experiences
         </motion.p>
-
       </div>
-    </section>
+    </SlideWrapper>
   );
 }
