@@ -21,7 +21,7 @@ export default function Deck() {
     why: <Why setActive={setActive} />,
     hub: <NavHub setActive={setActive} />,
     retail: <Retail setActive={setActive} />,
-    brand: <BrandPartnership setActive={setActive} />,
+    brand: <Brand setActive={setActive} />,
     entertainment: <Entertainment setActive={setActive} />,
     dining: <Dining setActive={setActive} />,
     venue: <Venue setActive={setActive} />,
