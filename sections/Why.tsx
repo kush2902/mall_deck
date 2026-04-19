@@ -10,24 +10,54 @@ type Props = {
 };
 
 export default function Why({ setActive }: Props) {
+  const sections = [
+    { key: "hero", label: "Intro" },
+    { key: "why", label: "Why Dubai Mall" },
+    { key: "hub", label: "Navigation Hub" },
+    { key: "retail", label: "Retail" },
+    { key: "brand", label: "Brand Partnerships" },
+    { key: "entertainment", label: "Entertainment" },
+    { key: "dining", label: "Dining" },
+    { key: "venue", label: "Venue" },
+  ];
+
   return (
     <SlideWrapper>
+      {/* BACK BUTTON */}
       <BackToHub setActive={setActive} />
+
+      {/* BACKGROUND */}
       <BackgroundMedia image="/images/why.jpg" />
 
+      {/* MAIN CONTENT */}
       <div className="relative z-10 h-full flex items-center px-20">
         <div className="max-w-2xl">
-
-          <motion.h2 className="text-5xl font-bold">
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl font-bold"
+          >
             Why Dubai Mall
           </motion.h2>
 
-          <motion.p className="mt-6 text-lg opacity-80">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 0.9, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="mt-6 text-lg opacity-80"
+          >
             A global destination combining tourism, luxury retail,
             and unmatched consumer footfall.
           </motion.p>
 
-          <div className="mt-10 flex gap-10 text-sm uppercase">
+          {/* STATS */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="mt-10 flex gap-10 text-sm uppercase"
+          >
             <div>
               <p className="text-2xl font-bold">100M+</p>
               <p className="opacity-60">Visitors</p>
@@ -40,9 +70,24 @@ export default function Why({ setActive }: Props) {
               <p className="text-2xl font-bold">Luxury</p>
               <p className="opacity-60">Market</p>
             </div>
-          </div>
-
+          </motion.div>
         </div>
+      </div>
+
+      {/* 👉 RIGHT SIDE INDEX NAVIGATION */}
+      <div className="absolute right-10 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-4 text-right">
+        {sections.map((item, index) => (
+          <motion.button
+            key={item.key}
+            onClick={() => setActive(item.key)}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 0.7, x: 0 }}
+            transition={{ delay: index * 0.08 }}
+            className="text-sm uppercase tracking-wider hover:opacity-100 transition"
+          >
+            {item.label}
+          </motion.button>
+        ))}
       </div>
     </SlideWrapper>
   );
