@@ -72,7 +72,7 @@ export default function Brand() {
             transition={{ delay: 0.6 }}
             className="grid grid-cols-3 gap-6 mt-12"
           >
-            {["nike.png","apple.png","gucci.png","zara.png","adidas.png","lv.png"].map((logo, i) => (
+            {["rolex.png","apple.png","chanel.png","dior.png","adidas.png","lv.png"].map((logo, i) => (
               <img
                 key={i}
                 src={`/images/${logo}`}
