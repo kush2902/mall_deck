@@ -4,7 +4,7 @@ import Hero from "../sections/Hero";
 import Why from "../sections/Why";
 import Retail from "../sections/Retail";
 import Entertainment from "../sections/Entertainment";
-import Opportunities from "../sections/Opportunities";
+import Dining from "../sections/Dining";
 
 import RetailLeasing from "../sections/RetailLeasing";
 import BrandPartnership from "../sections/BrandPartnership";
@@ -17,8 +17,9 @@ export default function Home() {
       <Hero />
       <Why />
       <Retail />
+      <Dining /> 
       <Entertainment />
-      <Opportunities />
+
       <RetailLeasing />
       <BrandPartnership />
       <EventBooking />
