@@ -3,6 +3,7 @@
 import SlideWrapper from "../components/SlideWrapper";
 import BackgroundMedia from "../components/BackgroundMedia";
 import BackToHub from "../components/BackToHub";
+import Image from "next/image";
 import { motion } from "framer-motion";
 type Props = {
   setActive: (key: string) => void;
