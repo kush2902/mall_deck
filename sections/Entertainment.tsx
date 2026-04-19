@@ -70,12 +70,10 @@ export default function Entertainment({ setActive }: Props) {
           transition={{ delay: 0.3 }}
           className="w-[55%] h-[65%] rounded-xl overflow-hidden shadow-2xl border border-white/10"
         >
-          <video
-            src="/videos/events.mp4"
-            autoPlay
-            muted
-            loop
-            className="w-full h-full object-cover scale-105"
+          <img
+           src="/images/aqua.jpg"
+           alt="Events"
+           className="w-full h-full object-cover scale-105"
           />
         </motion.div>
 
