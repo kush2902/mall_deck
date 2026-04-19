@@ -4,7 +4,7 @@ import SlideWrapper from "../components/SlideWrapper";
 import BackgroundMedia from "../components/BackgroundMedia";
 import BackToHub from "../components/BackToHub";
 
-export default function Events() {
+export default function Events({ setActive }: Props) {
   return (
     <SlideWrapper>
      <BackToHub setActive={setActive} />
