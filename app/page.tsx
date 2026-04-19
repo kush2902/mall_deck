@@ -5,7 +5,7 @@ import Why from "../sections/Why";
 import Retail from "../sections/Retail";
 import Entertainment from "../sections/Entertainment";
 import Dining from "../sections/Dining";
-
+import NavHub from "../sections/NavHub";
 import RetailLeasing from "../sections/RetailLeasing";
 import BrandPartnership from "../sections/BrandPartnership";
 import EventBooking from "../sections/EventBooking";
