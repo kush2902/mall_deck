@@ -1,40 +1,32 @@
 "use client";
 
+import SlideWrapper from "@/components/SlideWrapper";
 import { motion } from "framer-motion";
-
-const data = [
-  {
-    title: "Retail Leasing",
-    subtitle: "Luxury • Flagship • Pop-ups",
-    desc: "Position your brand alongside global icons in the highest footfall destination in the world.",
-    video: "/videos/retail.mp4",
-  },
-  {
-    title: "Brand Partnerships",
-    subtitle: "Sponsorships • Activations",
-    desc: "Create unforgettable brand experiences through high-impact collaborations.",
-    video: "/videos/partnership.mp4",
-  },
-  {
-    title: "Event Bookings",
-    subtitle: "Concerts • Launches • Corporate",
-    desc: "Host large-scale events powered by world-class infrastructure and reach.",
-    video: "/videos/events.mp4",
-  },
-  {
-    title: "Venue Modules",
-    subtitle: "PAC • Expo • Modular Spaces",
-    desc: "Flexible, premium venues designed for global-scale productions.",
-    video: "/videos/venue.mp4",
-  },
-];
 
 export default function Opportunities() {
   return (
-    <section className="bg-black text-white">
-
-      {/* 🔥 INTRO */}
-      <div className="h-screen flex flex-col justify-center items-center text-center px-6">
+    <SlideWrapper>
+      <div className="h-full flex items-center px-20">
+        <div className="grid grid-cols-2 gap-10">
+          {[
+            "Retail Leasing",
+            "Brand Partnerships",
+            "Event Bookings",
+            "Venue Monetization",
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.05 }}
+              className="border border-white/20 p-8 rounded-xl"
+            >
+              {item}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </SlideWrapper>
+  );
+}      <div className="h-screen flex flex-col justify-center items-center text-center px-6">
         <motion.h2
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
