@@ -9,7 +9,7 @@ type Props = {
   setActive: (key: string) => void;
 };
 
-export default function Retail() {
+export default function Retail({ setActive }: Props) {
   return (
     <SlideWrapper>
       <BackToHub setActive={setActive} />
