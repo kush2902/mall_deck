@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import Hero from "../sections/Hero";
 import Why from "../sections/Why";
-import NavHub from "../sections/NavHub";
 import Dining from "../sections/Dining";
 import Retail from "../sections/Retail";
 import Brand from "../sections/BrandPartnership";
@@ -19,7 +18,6 @@ export default function Deck() {
   const slides = {
     hero: <Hero setActive={setActive} />,
     why: <Why setActive={setActive} />,
-    hub: <NavHub setActive={setActive} />,
     retail: <Retail setActive={setActive} />,
     brand: <Brand setActive={setActive} />,
     entertainment: <Entertainment setActive={setActive} />,
@@ -36,7 +34,6 @@ export default function Deck() {
     entertainment: "/videos/entertainment.mp4",
     dining: "/videos/dining.mp4",
     venue: "/videos/venue.mp4",
-    hub: "/videos/hub.mp4",
   };
 
   return (
