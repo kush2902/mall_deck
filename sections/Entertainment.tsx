@@ -65,18 +65,18 @@ export default function Entertainment({ setActive }: Props) {
 
         {/* BIG VIDEO */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
-          className="w-[55%] h-[65%] rounded-xl overflow-hidden shadow-2xl border border-white/10"
-        >
-          <img
-           src="/images/aqua.jpg"
-           alt="Events"
-           fill
-           className="w-full h-full object-cover scale-105"
-          />
-        </motion.div>
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.3 }}
+  className="relative w-[55%] h-[65%] rounded-xl overflow-hidden shadow-2xl border border-white/10"
+>
+  <Image
+    src="/images/aqua.jpg"
+    alt="Events"
+    fill
+    className="object-cover scale-105"
+  />
+</motion.div>
 
       </div>
     </SlideWrapper>
