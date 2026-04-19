@@ -16,10 +16,10 @@ export default function Home() {
     <Deck>
       <Hero />
       <Why />
+      <NavHub /> 
       <Retail />
       <Dining /> 
       <Entertainment />
-
       <RetailLeasing />
       <BrandPartnership />
       <EventBooking />
