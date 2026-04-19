@@ -5,7 +5,11 @@ import BackgroundMedia from "../components/BackgroundMedia";
 import BackToHub from "../components/BackToHub";
 import { motion } from "framer-motion";
 
-export default function Brand() {
+type Props = {
+  setActive: (key: string) => void;
+};
+
+export default function BrandPartnership({ setActive }: Props) {
   return (
     <SlideWrapper>
       <BackToHub setActive={setActive} />
@@ -13,7 +17,7 @@ export default function Brand() {
       {/* BACKGROUND VIDEO */}
       <BackgroundMedia video="/videos/store.mp4" />
 
-      {/* DARK OVERLAY */}
+      {/* OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent z-0" />
 
       <div className="relative z-10 h-full flex items-center justify-between px-20">
@@ -38,8 +42,8 @@ export default function Brand() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-lg opacity-80"
           >
-            Position your brand in front of 100M+ annual visitors
-            in one of the world’s most premium retail destinations.
+            Activate your brand across one of the world’s most visited
+            retail destinations with unmatched visibility and engagement.
           </motion.p>
 
           {/* FACT STRIP */}
@@ -53,7 +57,7 @@ export default function Brand() {
               ["100M+", "Visitors"],
               ["Global", "Audience"],
               ["Premium", "Brands"],
-              ["High", "Dwell Time"],
+              ["High", "Engagement"],
             ].map(([value, label], i) => (
               <div key={i}>
                 <p className="text-2xl font-bold">{value}</p>
@@ -62,7 +66,7 @@ export default function Brand() {
             ))}
           </motion.div>
 
-          {/* LOGO GRID — FIXED */}
+          {/* LOGO GRID */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
