@@ -9,7 +9,7 @@ type Props = {
   setActive: (key: string) => void;
 };
 
-export default function Dining() {
+export default function Dining({ setActive }: Props) {
   return (
     <SlideWrapper>
       <BackToHub setActive={setActive} />
